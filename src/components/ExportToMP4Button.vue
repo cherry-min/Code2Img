@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseButton from "./BaseButton.vue";
 import { createContext, destroyContext, domToCanvas } from "modern-screenshot";
+// @ts-ignore
 import screenshotWorkerUrl from "modern-screenshot/worker?url";
 import { ArrayBufferTarget, Muxer } from "mp4-muxer";
 import { computed, reactive, ref } from "vue";

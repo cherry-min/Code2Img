@@ -26,16 +26,9 @@ defineProps<{
               store.editMode === 'code',
           }"
         >
-          Edit
+          编辑
         </BaseButton>
 
-        <!-- <BaseButton
-        @click="store.editMode = 'annotate'"
-        class="h-6 px-2 rounded-full hover:text-slate-100"
-        :class="{ 'bg-slate-50 text-slate-900 hover:text-slate-900': store.editMode === 'annotate' }"
-      >
-        Annotate
-      </BaseButton> -->
 
         <BaseButton
           @click="store.editMode = 'highlight'"
@@ -45,7 +38,7 @@ defineProps<{
               store.editMode === 'highlight',
           }"
         >
-          Highlight
+          高亮
         </BaseButton>
 
         <BaseButton
@@ -56,7 +49,7 @@ defineProps<{
               store.editMode === 'focus',
           }"
         >
-          Focus
+          关注
         </BaseButton>
 
         <BaseButton
@@ -67,7 +60,7 @@ defineProps<{
               store.editMode === 'add',
           }"
         >
-          Diff: Add
+          差异: 添加
         </BaseButton>
 
         <BaseButton
@@ -78,7 +71,7 @@ defineProps<{
               store.editMode === 'remove',
           }"
         >
-          Diff: Remove
+          差异: 移除
         </BaseButton>
 
         <BaseButton
@@ -96,7 +89,7 @@ defineProps<{
             getCodeBlocks().every((item) => item.transformations.length === 0)
           "
         >
-          Clear
+          清理
         </BaseButton>
       </div>
     </div>

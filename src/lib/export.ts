@@ -1,4 +1,5 @@
 import { track } from "@vercel/analytics";
+import { Toast } from "antd-mobile";
 import { domToBlob } from "modern-screenshot";
 import { nextTick } from "vue";
 import { exportState } from "~/composables/export-state";
@@ -29,6 +30,10 @@ export async function downloadPNG() {
   link.href = url;
   link.download = "screenshot.png";
   link.click();
+  Toast.show({
+    content: "代码片段已下载",
+    position: "top",
+  });
   exportState.value = ExportState.JustDownloaded;
   clearTimeout(timeout);
   timeout = setTimeout(() => {
@@ -72,6 +77,10 @@ export function copyPngToClipboard() {
         })
           .then((blob) => {
             exportState.value = ExportState.JustCopied;
+            Toast.show({
+              content: "代码片段已复制到剪切板",
+              position: "top",
+            });
             clearTimeout(timeout);
             timeout = setTimeout(() => {
               exportState.value = ExportState.Idle;

@@ -69,6 +69,7 @@ export default defineConfig(({ mode }) => ({
     fs: {
       strict: true,
     },
+    hmr: true,
   },
 
   // https://github.com/antfu/vite-ssg

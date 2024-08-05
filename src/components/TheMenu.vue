@@ -46,9 +46,9 @@ function clearLineDecorations() {
       v-model="currentMenu"
       class="flex items-center overflow-auto border-b border-b-zinc-800 bg-zinc-900 pwa:sm:border-t pwa:sm:border-t-black pwa:sm:shadow-[inset_0_1px_0_rgb(39_39_42)]"
     >
-      <MenubarMenu value="help" v-if="store.editMode === 'code'">
+       <MenubarMenu value="help" v-if="store.editMode === 'code'">
         <MenubarTrigger class="menubar-trigger">
-          Chalk
+          关于
           <i-radix-icons:chevron-down class="ml-1" />
         </MenubarTrigger>
 
@@ -82,34 +82,32 @@ function clearLineDecorations() {
               <i-ph:coffee class="mr-2 size-4" />
               Buy me a coffee
             </MenubarItem>
-            <!-- <MenubarSeparator class="h-[1px] bg-green6 m-[5px]" /> -->
           </MenubarContent>
         </MenubarPortal>
-      </MenubarMenu>
+      </MenubarMenu> 
 
       <MenubarMenu value="blocks" v-if="store.editMode === 'code'">
         <MenubarTrigger class="menubar-trigger">
-          <span>Blocks</span>
+          <span>代码块</span>
           <i-radix-icons:chevron-down class="ml-1" />
         </MenubarTrigger>
         <MenubarPortal>
           <MenubarContent class="menubar-content" :side-offset="8">
             <MenubarItem class="menubar-item group" @click="addEditorBlock">
-              Add Code Block
+              添加代码块
               <div class="menubar-item-shortcut">⌃ E</div>
             </MenubarItem>
             <MenubarItem class="menubar-item group" @click="addMarkdownBlock">
-              Add Markdown Block
+              添加markdown代码块
               <div class="menubar-item-shortcut">⇧ ⌃ E</div>
             </MenubarItem>
-            <!-- <MenubarSeparator class="h-[1px] bg-green6 m-[5px]" /> -->
           </MenubarContent>
         </MenubarPortal>
       </MenubarMenu>
 
       <MenubarMenu value="line decorations" v-if="store.editMode === 'code'">
         <MenubarTrigger class="menubar-trigger">
-          <span>Line decorations</span>
+          <span>高级</span>
           <i-radix-icons:chevron-down class="ml-1" />
         </MenubarTrigger>
 
@@ -119,29 +117,25 @@ function clearLineDecorations() {
               class="menubar-item group"
               @click="store.editMode = 'highlight'"
             >
-              Highlight
-              <!-- <div class="menubar-item-shortcut">⌘ E</div> -->
+              高亮
             </MenubarItem>
             <MenubarItem
               class="menubar-item group"
               @click="store.editMode = 'focus'"
             >
-              Focus
-              <!-- <div class="menubar-item-shortcut">⇧ ⌘ E</div> -->
+              聚焦
             </MenubarItem>
             <MenubarItem
               class="menubar-item group"
               @click="store.editMode = 'add'"
             >
-              Diff: Add
-              <!-- <div class="menubar-item-shortcut">⇧ ⌘ E</div> -->
+              差异: 代码添加
             </MenubarItem>
             <MenubarItem
               class="menubar-item group"
               @click="store.editMode = 'remove'"
             >
-              Diff: Remove
-              <!-- <div class="menubar-item-shortcut">⇧ ⌘ E</div> -->
+              差异: 代码移除
             </MenubarItem>
             <MenubarItem
               class="menubar-item group"
@@ -152,9 +146,8 @@ function clearLineDecorations() {
                 )
               "
             >
-              Clear all line decorations
+              清理样式
             </MenubarItem>
-            <!-- <MenubarSeparator class="h-[1px] bg-green6 m-[5px]" /> -->
           </MenubarContent>
         </MenubarPortal>
       </MenubarMenu>
@@ -177,7 +170,7 @@ function clearLineDecorations() {
           >
             <i-radix-icons:download class="size-4" />
           </div>
-          <span>Export</span>
+          <span>导出</span>
           <i-radix-icons:chevron-down class="ml-1" />
         </MenubarTrigger>
 
@@ -185,11 +178,11 @@ function clearLineDecorations() {
           <MenubarContent class="menubar-content" :side-offset="8">
             <MenubarItem class="menubar-item" @click="copyPngToClipboard">
               <i-radix-icons:clipboard class="mr-2 size-4" />
-              <span>Copy Image</span>
+              <span>复制图片</span>
             </MenubarItem>
             <MenubarItem class="menubar-item" @click="downloadPNG">
               <i-radix-icons:download class="mr-2 size-4" />
-              <span>Download PNG</span>
+              <span>下载PNG</span>
             </MenubarItem>
           </MenubarContent>
         </MenubarPortal>
@@ -201,16 +194,16 @@ function clearLineDecorations() {
         v-if="store.editMode !== 'code'"
       >
         <RadioGroupItem value="highlight" class="menubar-item-radio">
-          Highlight
+          高亮
         </RadioGroupItem>
         <RadioGroupItem value="focus" class="menubar-item-radio">
-          Focus
+          聚焦
         </RadioGroupItem>
         <RadioGroupItem value="add" class="menubar-item-radio">
-          Diff: Add
+          差异: 新增
         </RadioGroupItem>
         <RadioGroupItem value="remove" class="menubar-item-radio">
-          Diff: Remove
+          差异: 移除
         </RadioGroupItem>
       </RadioGroupRoot>
 
@@ -222,7 +215,7 @@ function clearLineDecorations() {
           getCodeBlocks().every((item) => item.transformations.length === 0)
         "
       >
-        Clear
+        清理
       </button>
 
       <BaseButton
@@ -230,7 +223,7 @@ function clearLineDecorations() {
         @click="store.editMode = 'code'"
         class="ml-4 h-8 bg-blue-700 px-4 text-white"
       >
-        Done
+        完成
       </BaseButton>
 
       <!-- <div

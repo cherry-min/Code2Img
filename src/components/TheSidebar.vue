@@ -105,7 +105,7 @@ const themeLabels = {
               class="grid grid-flow-col items-center justify-between gap-x-2 gap-y-2"
             >
               <label for="colorTheme" class="text-xs font-semibold"
-                >Color theme</label
+                >代码风格</label
               >
               <BaseSelect
                 id="colorTheme"
@@ -121,7 +121,7 @@ const themeLabels = {
               class="grid grid-cols-[1fr_auto_auto] items-center justify-between gap-x-2 gap-y-2"
             >
               <label for="useCustomTheme" class="text-xs font-semibold"
-                >Custom theme</label
+                >自定义风格</label
               >
               <BaseButton
                 class="h-5 rounded bg-blue-600/30 px-2.5 text-xs font-semibold text-blue-500 hover:bg-blue-600/40"
@@ -133,10 +133,10 @@ const themeLabels = {
                 <span
                   class="text-[10px] uppercase tracking-wider"
                   v-if="!store.expandCustomThemeOptions"
-                  >Edit</span
+                  >编辑</span
                 >
                 <span v-else class="text-[10px] uppercase tracking-wider"
-                  >Collapse</span
+                  >折叠</span
                 >
               </BaseButton>
               <BaseSwitch v-model="store.useCustomTheme" id="useCustomTheme" />
@@ -194,7 +194,7 @@ const themeLabels = {
             <div
               class="grid grid-flow-col items-center justify-between gap-x-2 gap-y-2"
             >
-              <label for="fontFamily" class="text-xs font-semibold">Font</label>
+              <label for="fontFamily" class="text-xs font-semibold">字体</label>
               <BaseSelect
                 class="-my-1"
                 id="fontFamily"
@@ -211,7 +211,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="fontLigatures"
-                >Font ligatures</label
+                >符号连写</label
               >
               <BaseSwitch
                 :disabled="!LIGATURE_FONTS.includes(store.fontFamily)"
@@ -226,7 +226,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="fontSize"
-                >Font size</label
+                >字号</label
               >
               <div class="grid grid-flow-col gap-x-2 text-sm">
                 <NumberInput
@@ -245,7 +245,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="lineHeight"
-                >Line height</label
+                >行高</label
               >
               <div class="grid grid-flow-col gap-x-2 text-sm">
                 <NumberInput
@@ -264,7 +264,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="showLineNumbers"
-                >Line numbers</label
+                >行号</label
               >
               <BaseSwitch
                 v-model="store.showLineNumbers"
@@ -282,7 +282,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="showBackground"
-                >Backdrop</label
+                >背景</label
               >
 
               <BaseButton
@@ -346,7 +346,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="backdropNoise"
-                >Backdrop noise</label
+                >背景噪点</label
               >
               <BaseSwitch
                 v-model="store.backdropNoise"
@@ -361,7 +361,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="showParticles"
-                >Backdrop particles</label
+                >背景粒子</label
               >
               <BaseSwitch v-model="store.showParticles" id="showParticles" />
             </div>
@@ -370,7 +370,7 @@ const themeLabels = {
             >
               <div class="flex items-center">
                 <label for="shadowOverlay" class="text-xs font-semibold"
-                  >Shadow overlay</label
+                  >阴影覆盖</label
                 >
               </div>
               <BaseSelect
@@ -389,7 +389,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="paddingX"
-                >Padding X</label
+                >宽</label
               >
               <div class="grid grid-flow-col gap-x-2 text-sm">
                 <BaseSlider
@@ -409,7 +409,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="paddingY"
-                >Padding Y</label
+                >长</label
               >
               <div class="grid grid-flow-col gap-x-2 text-sm">
                 <BaseSlider
@@ -431,7 +431,7 @@ const themeLabels = {
               class="grid grid-flow-col items-center justify-between gap-x-2 gap-y-2"
             >
               <label for="windowStyle" class="text-xs font-semibold"
-                >Window style</label
+                >窗口风格</label
               >
               <BaseSelect
                 id="windowStyle"
@@ -448,7 +448,7 @@ const themeLabels = {
               class="grid grid-flow-col items-center justify-between gap-x-2 gap-y-2"
             >
               <label for="windowControls" class="text-xs font-semibold"
-                >Window controls</label
+                >窗口控制</label
               >
               <BaseSelect
                 id="windowControls"
@@ -475,7 +475,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="windowNoise"
-                >Window noise</label
+                >窗口噪点</label
               >
               <BaseSwitch v-model="store.windowNoise" id="windowNoise" />
             </div>
@@ -486,7 +486,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="reflection"
-                >Window reflection</label
+                >窗口倒影</label
               >
               <BaseSwitch v-model="store.reflection" id="reflection" />
             </div>
@@ -501,7 +501,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="showTwitterBadge"
-                >Twitter badge</label
+                >公众号徽章</label
               >
               <BaseButton
                 class="h-5 rounded bg-blue-600/30 px-2.5 text-xs font-semibold text-blue-500 hover:bg-blue-600/40"
@@ -613,7 +613,7 @@ const themeLabels = {
               <label
                 class="cursor-pointer select-none text-xs font-semibold"
                 for="showWatermark"
-                >Watermark</label
+                >水印</label
               >
               <BaseButton
                 class="h-5 rounded bg-blue-600/30 px-2.5 text-xs font-semibold text-blue-500 hover:bg-blue-600/40"
@@ -639,7 +639,7 @@ const themeLabels = {
                 <label
                   class="cursor-pointer select-none text-xs font-semibold"
                   for="watermarkText"
-                  >Watermark text</label
+                  >水印文字</label
                 >
                 <BaseInput
                   class="w-[116px] placeholder:text-slate-600/75"
@@ -658,7 +658,7 @@ const themeLabels = {
                 <label
                   class="cursor-pointer select-none text-xs font-semibold"
                   for="watermarkOpacity"
-                  >Watermark opacity</label
+                  >水印透明度</label
                 >
                 <div class="grid grid-flow-col gap-x-2 text-sm">
                   <BaseSlider

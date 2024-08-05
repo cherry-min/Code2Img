@@ -10,4 +10,26 @@
 <script setup lang="ts">
 import TheEditorFrame from "~/components/TheEditorFrame.vue";
 import TheSidebar from "~/components/TheSidebar.vue";
+import { onMounted ,onUnmounted} from 'vue'
+import { copyPngToClipboard, downloadPNG } from "~/lib/export";
+const save =(event: KeyboardEvent) => {
+    if (event.ctrlKey && event.key === 's') {
+        event.preventDefault();
+        downloadPNG(); 
+      }
+      if (event.ctrlKey && event.key === 'c') {
+        event.preventDefault();
+        copyPngToClipboard();
+      }
+  }
+onMounted(()=>{
+  console.log('mounted')
+  window.addEventListener('keydown',save );
+
+})
+onUnmounted(()=>{
+  console.log('unmounted')
+  window.removeEventListener('keydown', save);
+})
+
 </script>

@@ -30,10 +30,10 @@ const isFirefox = computed(() => {
         exportState === ExportState.PreparingToCopy
           ? "..."
           : exportState === ExportState.JustCopied
-            ? "Copied!"
+            ? "复制成功!"
             : exportState === ExportState.CopyFailure
-              ? "Error! Try to download"
-              : "Copy image to clipboard"
+              ? "Error! 尝试下载"
+              : "复制图片到剪切板"
       }}
     </span>
   </BaseButton>
