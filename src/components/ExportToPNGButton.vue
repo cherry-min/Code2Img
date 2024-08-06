@@ -56,8 +56,8 @@ async function handleDownload() {
         exportState === ExportState.PreparingToDownload
           ? "..."
           : exportState === ExportState.JustDownloaded
-            ? "Downloaded!"
-            : "Download PNG"
+            ? "已下载!"
+            : "下载 PNG"
       }}
     </span>
   </BaseButton>

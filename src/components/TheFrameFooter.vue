@@ -9,7 +9,7 @@ const author = computed(() => {
 </script>
 
 <template>
-  <div class="flex justify-between items-center">
+  <div class="flex items-center justify-between">
     <div
       v-if="store.showWatermark"
       :class="{
@@ -21,7 +21,7 @@ const author = computed(() => {
       }"
     >
       <div
-        class="text-white z-10 left-2 absolute bottom-2 text-sm h-5 font-medium tracking-wide [text-shadow:0_0px_3px_black]"
+        class="absolute bottom-2 left-2 z-10 h-5 text-sm font-medium tracking-wide text-white [text-shadow:0_0px_3px_black]"
         :style="{
           opacity: store.watermarkOpacity / 100,
         }"
@@ -31,9 +31,7 @@ const author = computed(() => {
     </div>
     <component
       :is="author.username ? 'a' : 'div'"
-      :href="
-        author.username ? `https://twitter.com/${author.username}` : undefined
-      "
+      href="#"
       class="relative z-10 ml-auto mt-4 flex items-center rounded-full bg-black/70 p-1 text-white"
       :class="{
         'hover:bg-black/50': author.username,
@@ -64,7 +62,7 @@ const author = computed(() => {
             'text-[11px] text-white/50': author.name,
           }"
         >
-          @{{ author.username }}
+          ID:{{ author.username }}
         </div>
       </div>
     </component>
