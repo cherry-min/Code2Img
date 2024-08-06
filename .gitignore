@@ -33,3 +33,6 @@ dist-ssr
 .dev
 .env
 supabase/.temp
+
+dist*
+*.lock*

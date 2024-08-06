@@ -53,7 +53,7 @@ export const store = useStorage("chalk-store", {
       content: DEFAULT_CONTENT,
       language: "typescript",
       type: BlockType.Code,
-      title: "example.js",
+      title: "文件名.js",
       icon: "",
       columnSpan: 12,
       rowSpan: 1,

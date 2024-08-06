@@ -411,7 +411,7 @@ const backdrop = computed(() => Backdrops[store.value.backdrop]);
         use-opaque-background
         :model-value="block.columnSpan"
         @update:model-value="block.columnSpan = $event"
-        :label="(option) => `${option.value} columns`"
+        :label="(option) => `${option.value} 列`"
         :options="COLUMN_OPTIONS"
       />
 
@@ -423,9 +423,7 @@ const backdrop = computed(() => Backdrops[store.value.backdrop]);
         :label="
           (option) =>
             `${option.value} ${
-              typeof option.value === 'number' && option.value > 1
-                ? 'rows'
-                : 'row'
+              typeof option.value === 'number' && option.value > 1 ? '行' : '行'
             }`
         "
         :options="ROW_OPTIONS"

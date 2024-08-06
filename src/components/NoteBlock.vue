@@ -77,7 +77,7 @@ const backdrop = computed(() => Backdrops[store.value.backdrop]);
         use-opaque-background
         :model-value="block.columnSpan"
         @update:model-value="block.columnSpan = $event"
-        :label="(option) => `${option.value} columns`"
+        :label="(option: any) => `${option.value} 列`"
         :options="COLUMN_OPTIONS"
       />
 

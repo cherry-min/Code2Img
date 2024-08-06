@@ -855,7 +855,7 @@ onUnmounted(() => {
           v-else
           class="-my-2 rounded bg-white/10 px-2 py-1 text-xs text-slate-300 hover:bg-white/15"
         >
-          Select icon
+          选择图标
         </div>
       </ComboboxTrigger>
     </ComboboxAnchor>
@@ -879,7 +879,7 @@ onUnmounted(() => {
             class="col-span-8 grid h-6 cursor-pointer items-center px-2 text-xs font-medium transition-colors hover:text-white"
             v-if="list.length === 0"
           >
-            No icons found for "{{ searchTerm }}"
+            没有找到 "{{ searchTerm }}"
           </div>
           <div
             :tabindex="0"
@@ -918,7 +918,7 @@ onUnmounted(() => {
               }
             "
           >
-            Remove icon
+            移除图标
           </div>
         </div>
       </ComboboxContent>

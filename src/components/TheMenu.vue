@@ -46,7 +46,7 @@ function clearLineDecorations() {
       v-model="currentMenu"
       class="flex items-center overflow-auto border-b border-b-zinc-800 bg-zinc-900 pwa:sm:border-t pwa:sm:border-t-black pwa:sm:shadow-[inset_0_1px_0_rgb(39_39_42)]"
     >
-       <MenubarMenu value="help" v-if="store.editMode === 'code'">
+      <!-- <MenubarMenu value="help" v-if="store.editMode === 'code'">
         <MenubarTrigger class="menubar-trigger">
           关于
           <i-radix-icons:chevron-down class="ml-1" />
@@ -84,7 +84,7 @@ function clearLineDecorations() {
             </MenubarItem>
           </MenubarContent>
         </MenubarPortal>
-      </MenubarMenu> 
+      </MenubarMenu> -->
 
       <MenubarMenu value="blocks" v-if="store.editMode === 'code'">
         <MenubarTrigger class="menubar-trigger">
