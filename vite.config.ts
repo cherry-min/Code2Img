@@ -89,4 +89,7 @@ export default defineConfig(({ mode }) => ({
     ],
     exclude: ["vue-demi"],
   },
+  build: {
+    sourcemap: false,
+  },
 }));
