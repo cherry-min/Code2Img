@@ -70,6 +70,14 @@ export default defineConfig(({ mode }) => ({
       strict: true,
     },
     hmr: true,
+    port: 9000,
+    proxy:{
+      "/api": {
+        target: "http://localhost:8080",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      }
+    }
   },
 
   // https://github.com/antfu/vite-ssg

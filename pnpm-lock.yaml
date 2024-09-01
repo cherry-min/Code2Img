@@ -58,10 +58,13 @@ importers:
         version: 10.7.0(vue@3.4.23(typescript@5.3.3))
       '@vueuse/integrations':
         specifier: 10.4.1
-        version: 10.4.1(async-validator@4.2.5)(fuse.js@6.5.3)(vue@3.4.23(typescript@5.3.3))
+        version: 10.4.1(async-validator@4.2.5)(axios@1.7.7)(fuse.js@6.5.3)(vue@3.4.23(typescript@5.3.3))
       antd-mobile:
         specifier: ^5.37.1
         version: 5.37.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      axios:
+        specifier: ^1.7.7
+        version: 1.7.7
       fuse.js:
         specifier: 6.5.3
         version: 6.5.3
@@ -1419,6 +1422,9 @@ packages:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
     engines: {node: '>= 0.4'}
 
+  axios@1.7.7:
+    resolution: {integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==}
+
   babel-plugin-polyfill-corejs2@0.4.7:
     resolution: {integrity: sha512-LidDk/tEGDfuHW2DWh/Hgo4rmnw3cduK6ZkOI1NPFceSK3n/yAGeOsNT7FLnSGHkXj3RHGSEVkN3FsCTY6w2CQ==}
     peerDependencies:
@@ -1719,6 +1725,15 @@ packages:
   find-up@5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
     engines: {node: '>=10'}
+
+  follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
 
   for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -2504,6 +2519,9 @@ packages:
   pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
+
+  proxy-from-env@1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
   psl@1.9.0:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
@@ -4535,13 +4553,14 @@ snapshots:
     dependencies:
       vue: 3.4.23(typescript@5.3.3)
 
-  '@vueuse/integrations@10.4.1(async-validator@4.2.5)(fuse.js@6.5.3)(vue@3.4.23(typescript@5.3.3))':
+  '@vueuse/integrations@10.4.1(async-validator@4.2.5)(axios@1.7.7)(fuse.js@6.5.3)(vue@3.4.23(typescript@5.3.3))':
     dependencies:
       '@vueuse/core': 10.4.1(vue@3.4.23(typescript@5.3.3))
       '@vueuse/shared': 10.4.1(vue@3.4.23(typescript@5.3.3))
       vue-demi: 0.14.6(vue@3.4.23(typescript@5.3.3))
     optionalDependencies:
       async-validator: 4.2.5
+      axios: 1.7.7
       fuse.js: 6.5.3
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -4686,6 +4705,14 @@ snapshots:
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.5: {}
+
+  axios@1.7.7:
+    dependencies:
+      follow-redirects: 1.15.6
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
 
   babel-plugin-polyfill-corejs2@0.4.7(@babel/core@7.23.7):
     dependencies:
@@ -5078,6 +5105,8 @@ snapshots:
     dependencies:
       locate-path: 6.0.0
       path-exists: 4.0.0
+
+  follow-redirects@1.15.6: {}
 
   for-each@0.3.3:
     dependencies:
@@ -5781,6 +5810,8 @@ snapshots:
   pretty-bytes@5.6.0: {}
 
   pretty-bytes@6.1.1: {}
+
+  proxy-from-env@1.1.0: {}
 
   psl@1.9.0: {}
 
