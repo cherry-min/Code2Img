@@ -39,8 +39,8 @@ export default defineConfig(({ mode }) => ({
       },
       includeAssets: ["og-image.jpg", "robots.txt", "favicon.ico"],
       manifest: {
-        name: "Chalk",
-        short_name: "Chalk",
+        name: "LoveIde",
+        short_name: "LoveIde",
         theme_color: "#18181b",
         background_color: "#18181b",
         icons: [
@@ -71,13 +71,13 @@ export default defineConfig(({ mode }) => ({
     },
     hmr: true,
     port: 9000,
-    proxy:{
+    proxy: {
       "/api": {
         target: "http://localhost:8080",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
-      }
-    }
+      },
+    },
   },
 
   // https://github.com/antfu/vite-ssg

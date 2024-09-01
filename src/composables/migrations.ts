@@ -49,7 +49,7 @@ export function runStoreMigrations() {
   store.value.expandCustomThemeOptions =
     store.value.expandCustomThemeOptions ?? false;
   store.value.windowNoise = store.value.windowNoise ?? false;
-  store.value.watermark = store.value.watermark ?? "chalk.ist";
+  store.value.watermark = store.value.watermark ?? "loveide.fun";
   store.value.watermarkOpacity = store.value.watermarkOpacity || 50;
   store.value.showWatermark = store.value.showWatermark ?? true;
   store.value.expandWatermarkOptions =
