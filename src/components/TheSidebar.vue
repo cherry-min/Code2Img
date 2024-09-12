@@ -95,6 +95,7 @@ const getViewCount = () => {
 }
 onMounted(() => {
   getViewCount()
+
 })
 </script>
 
